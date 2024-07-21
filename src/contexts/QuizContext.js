@@ -82,7 +82,8 @@ function QuizProvider({ children }) {
   );
 
   useEffect(function () {
-    fetch("http://localhost:8000/questions")
+    // fetch("http://localhost:8000/questions")
+    fetch("https://quark-liberating-puppy.glitch.me/questions")
       .then((res) => res.json())
       .then((data) => dispatch({ type: "dataReceived", payload: data }))
       .catch((err) => dispatch({ type: "dataFailed" }));
